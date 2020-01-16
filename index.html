@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>vue</title>
+</head>
+
+<body>
+  <!-- 元素容器 -->
+  <h1>Fetch请求</h1>
+  <div id="app">
+    <form @submit.prevent="onSubmit">
+      <input type="text" v-model="todo.title">
+      <input type="checkbox" v-model="todo.completed">
+      <input type="submit" value="提交">
+    </form>
+    <ol>
+      <li v-for="todo in todos">
+        <span>{{todo.id}}</span>
+        <h2>{{todo.title}}</h2>
+        <p v-if="todo.completed">{{todo.completed}}</p>
+      </li>
+    </ol>
+  </div>
+</body>
+<script src="app.js"></script>
+
+</html>

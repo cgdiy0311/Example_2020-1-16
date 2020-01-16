@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="input_test.css">
+  <title>vue</title>
+</head>
+
+<body>
+  <h1>html5+css实现表单验证</h1>
+  <h4>账号和密码必须包含三个数字和三个英文字符</h4>
+  <form class="form" id="form" method="get" action="api/form">
+    账号：
+    <input data-title="账号" placeholder="2~8个汉字的用户名" pattern="^[\u4e00-\u9fa5]{2,8}$" name="account" required="required"
+      type="text">
+    <span class="f-tips">请输入2~8个汉字的用户名</span>
+    <br>
+    密码：
+    <input data-title="密码" placeholder="4~8位的英文或数字的密码" pattern="^[A-Za-z0-9]{4,8}" name="account" required="required"
+      type="password">
+    <span class="f-tips">请输入4~8位的英文或数字的密码</span>
+    <br>
+    <button name="button" type="submit" value="提交">提交</button>
+  </form>
+</body>
+
+</html>

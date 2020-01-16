@@ -1,0 +1,56 @@
+.warning {
+  color: red;
+}
+
+.form>input {
+  margin-bottom: 10px;
+}
+
+.f-tips {
+  color: red;
+  display: none;
+}
+
+.form input {
+  outline: none;
+  background-color: #fff;
+  border: 1px solid #666;
+  height: 28px;
+  padding: 5px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+}
+
+input:-webkit-autofill {
+  box-shadow: inset 0 0 0 1000px #fff !important;
+}
+
+.form input::-webkit-input-placeholder {
+  color: #bbb;
+}
+
+.form input::-moz-placeholder {
+  color: #bbb;
+}
+
+.form input:-ms-input-placeholder {
+  color: #bbb;
+}
+
+.form input[type="text"]:invalid~button[type="submit"],
+.form input[type="password"]:invalid~button[type="submit"] {
+  pointer-events: none;
+  opacity: .4;
+}
+
+.form input[required]:focus:invalid+span {
+  display: inline;
+}
+
+.form input[required]:empty+span {
+  display: none;
+}
+
+.form input[required]:invalid:not(:placeholder-shown)+span {
+  display: inline;
+}
